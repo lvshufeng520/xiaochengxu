@@ -55,5 +55,11 @@
     </navigator>
   </view>
 
+  <!-- ‘我的’模块 -->
+  <view class="uploader">
+    <navigator url="../mine/mine" open-type="navigate" class="uploader-text">
+      <text>跳到我的页面</text>
+    </navigator>
+  </view>
 
 </view>
