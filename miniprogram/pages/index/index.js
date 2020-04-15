@@ -35,7 +35,7 @@ Page({
       }
     })
   },
-
+  
   onGetUserInfo: function(e) {
     if (!this.data.logged && e.detail.userInfo) {
       this.setData({

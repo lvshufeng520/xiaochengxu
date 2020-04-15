@@ -9,6 +9,8 @@
   top:70px;
   left:100px;
   z-index: 100;
+  border-radius: 150px;
+  box-shadow: 0px 0px 10px 3px rgb(100, 97, 97);
 }
 .tx1{
   border-radius: 150px;
@@ -62,4 +64,7 @@
   top:-15px;
   left:-10px;
   border-radius: 50px;
+}
+.bianji{
+  font-size: 14px;
 }

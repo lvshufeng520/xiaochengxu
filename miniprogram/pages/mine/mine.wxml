@@ -1,16 +1,32 @@
 <!--miniprogram/pages/mine/mine.wxml.wxml-->
 <image class="bj1" src="../../images/bj.jpg"></image>
-<view class="tx">
-  <image src="../../images/tx.jpg" class="tx1"></image>
+<!-- 登陆+编辑 -->
+<view>
+  <button 
+    open-type="getUserInfo" 
+    bindgetuserinfo="onGetUserInfo"
+    style="background-image: url({{avatarUrl}})"
+    class='tx'
+  ></button>
 </view>
 <view class="body1">
 </view>
 <view class="body2">
-  <view class="info">
-    <text id="username" style="font-size:25px">小一\n</text>
-    <text id="userid">2017012049\n</text>
-    <text id="usercollege">河北师范大学软件学院\n</text>
+  <view wx:if="{{!logged}}" class="info">
+    <text id="userid">点击头像授权登陆\n</text>
   </view>
+  <view wx:else class="info">
+    <view wx:if="{{!allinfo}}">
+        <text class="bianji" bindtouchend="bindChangeTo">点击编辑个人信息</text>
+    </view>
+    <view wx:else>
+      <text id="username" style="font-size:25px">小一\n</text>
+      <text id="userid">2017012049\n</text>
+      <text id="usercollege">河北师范大学软件学院\n</text>
+    </view>
+  </view>
+
+
     <view class="btn">
       <image src="../../images/b1.png" class="b1"></image>
       我参加的比赛
