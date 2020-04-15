@@ -1,15 +1,19 @@
 // miniprogram/pages/edit/edit.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    avatarUrl: './user-unlogin.png',
+    avatarUrl: '',
     userInfo: {},
     logged: true,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    fileID: '',
+    cloudPath: '',
+    imagePath: '',
   },
 
   /**
@@ -23,16 +27,19 @@ Page({
     eventChannel.emit('someEvent', { data: 'test' });
     // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
     eventChannel.on('acceptDataFromOpenerPage', function (data) {
+      console.log(data.data)
       that.setData({
         logged: true,
-        avatarUrl: data.avatarUrl,
-        userInfo: data.nickName
+        avatarUrl: data.data.avatarUrl,
+        userInfo: data.data.nickName
       })
     })
   },
   // 上传图片
   doUpload: function () {
     // 选择图片
+    console.log(this)
+    var that = this;
     wx.chooseImage({
       count: 1,
       sizeType: ['compressed'],
@@ -51,9 +58,9 @@ Page({
             console.log('[上传文件] 成功：', res)
             app.globalData.fileID = res.fileID
             app.globalData.cloudPath = cloudPath
-            app.globalData.imagePath = filePath
-            wx.navigateTo({
-              url: '../storageConsole/storageConsole'
+            app.globalData.imagePath = filePath;
+            that.setData({
+              avatarUrl: app.globalData.imagePath
             })
           },
           fail: e => {
@@ -84,7 +91,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log(this.data)
   },
 
   /**

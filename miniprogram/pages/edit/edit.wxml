@@ -1,10 +1,52 @@
 <!--miniprogram/pages/edit/edit.wxml-->
-  <!-- 上传图片 -->
-  <view class="uploader">
-    <view class="uploader-text" bindtap="doUpload">
-      <text>上传图片</text>
-    </view>
-    <view class="uploader-container" wx:if="{{imgUrl}}">
-      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
-    </view>
+<!-- 头像 -->
+<view class='tx'>
+  <button 
+    style="background-image: url({{avatarUrl}})"
+    class="tx1"
+    bindtap="doUpload"
+  ></button>
+</view>
+<text class='f1'>点击头像更换照片</text>
+<view class="li" id="li1">
+  <image src='../../images/mine.png' class="i1"></image>
+  <view class="i2">
+    <text class="i3">姓名</text>
+    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请输入真实姓名" />
   </view>
+</view>
+<view class="li" id="li2">
+  <image src='../../images/sex.png' class="i1"></image>
+  <view class="i2">
+    <text class="i3">性别</text>
+    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请选择性别" />
+  </view>
+</view>
+<view class="li" id="li3">
+  <image src='../../images/school.png' class="i1"></image>
+  <view class="i2">
+    <text class="i3">学校</text>
+    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请选择学校" />
+  </view>
+</view>
+<view class="li" id="li4">
+  <image src='../../images/college.png' class="i1"></image>
+  <view class="i2">
+    <text class="i3">学院</text>
+    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请选择学院" />
+  </view>
+</view>
+<view class="li" id="li5">
+  <image src='../../images/id.png' class="i1"></image>
+  <view class="i2">
+    <text class="i3">学号</text>
+    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请输入学号" />
+  </view>
+</view>
+<view class="li" id="li6">
+  <image src='../../images/tel.png' class="i1"></image>
+  <view class="i2">
+    <text class="i3">联系方式</text>
+    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请输入手机号" />
+  </view>
+</view>

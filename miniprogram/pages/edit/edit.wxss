@@ -1,44 +1,69 @@
 /* miniprogram/pages/edit/edit.wxss */
-.userinfo, .uploader, .tunnel {
-  margin-top: 40rpx;
-  height: 140rpx;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
+.tx{
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: all 300ms ease;
+  height:130px;
+  width:130px;
+  position:absolute;
+  top:40px;
+  left:130px;
+  border-radius: 500px;
+  box-shadow: 0px 0px 10px 3px rgb(100, 97, 97);
 }
-.uploader, .tunnel {
-  height: auto;
-  padding: 0 0 0 40rpx;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
+.tx1{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
 }
-
-.uploader-text, .tunnel-text {
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007aff;
+.f1{
+  text-align: center;
+  position: relative;
+  top:180px;
 }
-
-.uploader-container {
-  width: 100%;
-  height: 400rpx;
-  padding: 20rpx 20rpx 20rpx 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+.li{
+  width:100%;
+  height:50px;
+  position: absolute;
 }
-
-.uploader-image {
-  width: 100%;
-  height: 360rpx;
+.i1{
+  width:30px;
+  height:30px;
+  position: relative;
+  left:40px;
+  float:left;
+  top:-5px;
+}
+.i2{
+  position: relative;
+  width:70%;
+  border-bottom:1px dashed #62D4A6;
+  float: left;
+  left:50px;
+}
+.i3{
+  float:left;
+}
+i4{
+  float:right;
+  padding:0;
+  margin:0;
+}
+#li1{
+  top:220px;
+}
+#li2{
+  top:250px;
+}
+#li3{
+  top:280px;
+}
+#li4{
+  top:310px;
+}
+#li5{
+  top:340px;
+}
+#li6{
+  top:370px;
 }
