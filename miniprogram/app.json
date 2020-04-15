@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/schedule/schedule",
     "pages/mine/mine",
+    "pages/edit/edit",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -26,8 +27,8 @@
   "sitemapLocation": "sitemap.json",
   "style": "v2",
   "tabBar": {
-    "color":"#707070",
-    "selectedColor":"#62d4a6",
+    "color": "#707070",
+    "selectedColor": "#62d4a6",
     "list": [
       {
         "pagePath": "pages/index/index",

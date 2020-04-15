@@ -12,41 +12,66 @@
   <image src='../../images/mine.png' class="i1"></image>
   <view class="i2">
     <text class="i3">姓名</text>
-    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请输入真实姓名" />
+    <input class="i4" 
+    style='text-align:right'
+    type="text" placeholder-style='text-align:right' placeholder="请输入真实姓名" />
   </view>
 </view>
 <view class="li" id="li2">
   <image src='../../images/sex.png' class="i1"></image>
   <view class="i2">
-    <text class="i3">性别</text>
-    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请选择性别" />
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <text class="i3">性别</text>
+      <view class="i4" style='width:20px;height:20.8px;float:right'>
+        {{array[index]}}
+      </view>
+    </picker>
   </view>
 </view>
 <view class="li" id="li3">
   <image src='../../images/school.png' class="i1"></image>
   <view class="i2">
     <text class="i3">学校</text>
-    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请选择学校" />
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker" style='text-align:right'>
+        {{region[1]}}
+      </view>
+    </picker>
   </view>
 </view>
 <view class="li" id="li4">
   <image src='../../images/college.png' class="i1"></image>
   <view class="i2">
     <text class="i3">学院</text>
-    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请选择学院" />
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker" style='text-align:right'>
+        {{region[2]}}
+      </view>
+    </picker>
   </view>
 </view>
 <view class="li" id="li5">
   <image src='../../images/id.png' class="i1"></image>
   <view class="i2">
     <text class="i3">学号</text>
-    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请输入学号" />
+    <input class="i4" style='text-align:right' type="text" placeholder-style='text-align:right' placeholder="请输入学号" />
   </view>
 </view>
 <view class="li" id="li6">
   <image src='../../images/tel.png' class="i1"></image>
   <view class="i2">
     <text class="i3">联系方式</text>
-    <input class="i4" type="text" placeholder-style='text-align:right' placeholder="请输入手机号" />
+    <input class="i4" style='text-align:right' type="text" placeholder-style='text-align:right' placeholder="请输入手机号" />
   </view>
+</view>
+<!-- 测试数据库 -->
+<button style="position:absolute;bottom:0px;" size="mini" type="default" bindtap="onQuery">查询记录</button>
+<!-- 测试多列选择 -->
+<view class="section" style='position:absolute;bottom:50px;'>
+  <view class="section__title">多列选择器</view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+    </view>
+  </picker>
 </view>
