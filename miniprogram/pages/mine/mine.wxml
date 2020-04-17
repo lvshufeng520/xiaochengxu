@@ -25,14 +25,16 @@
       <text id="usercollege">河北师范大学软件学院\n</text>
     </view>
   </view>
-
-
+  <navigator url="../mine_join/mine_join" open-type="navigate">
     <view class="btn">
       <image src="../../images/b1.png" class="b1"></image>
       我参加的比赛
     </view>
+  </navigator>
+  <navigator url="../mine_management/mine_management" open-type="navigate">
     <view class="btn">
       <image src="../../images/b2.png" class="b1"></image>
       我管理的比赛
     </view>
+  </navigator>
 </view>

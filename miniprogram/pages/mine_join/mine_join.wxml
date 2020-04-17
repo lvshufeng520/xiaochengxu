@@ -1,0 +1,31 @@
+<view class="v1">
+  <image src="../../images/run.png" class="v2"></image>
+  <view class="v3">
+    <text>男子3000米\n</text>
+    <text class="v4">河北师范大学第十届运动会\n</text>
+  </view>
+  <view class="v5">
+    <text>8:34:12\n</text>
+    <view style="font-size:18px" class="v6">
+      <text>第</text>
+      <text style='color:red'>1</text>
+      <text>名</text>
+    </view>
+  </view>
+</view>
+
+<view class="v1">
+  <image src="../../images/jump.png" class="v2"></image>
+  <view class="v3">
+    <text>男子跳远\n</text>
+    <text class="v4">河北师范大学第十届运动会\n</text>
+  </view>
+  <view class="v5">
+    <text>1.2米\n</text>
+    <view style="font-size:18px" class="v6">
+      <text>第</text>
+      <text style='color:red'>5</text>
+      <text>名</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<!--miniprogram/pages/mine_management/mine_management.wxml-->
+<view class="v1">
+  <image src="../../images/河北师范大学.png" class="v2"></image>
+  <view class="v6">
+    <text class="v3">男子篮球联赛\n</text>
+    <text class="v4">2020年5月-2020年6月\n</text>
+    <text class="v5">河北师范大学第十届篮球校联赛\n</text>
+  </view>
+</view>
+<view class="v1">
+  <image src="../../images/河北师范大学.png" class="v2"></image>
+  <view class="v6">
+    <text class="v3">男子3000米\n</text>
+    <text class="v4">2020年5月18日\n</text>
+    <text class="v5">河北师范大学第十届运动会\n</text>
+  </view>
+</view>

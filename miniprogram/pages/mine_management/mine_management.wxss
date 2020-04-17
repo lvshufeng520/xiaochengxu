@@ -1,0 +1,50 @@
+/* miniprogram/pages/mine_management/mine_management.wxss */
+.v1{
+  left: 23px;
+  margin-top:20px;
+  width: 329px;
+  height: 115px;
+  line-height: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(16, 16, 16, 1);
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.1);
+  font-family: Arial;
+  border: 1px solid rgba(255, 255, 255, 0);
+  position: relative;
+}
+.v2{
+  position: relative;
+  float:left;
+  width:70px;
+  height:70px;
+  border-radius: 50px;
+  top:20px;
+  left:20px;
+}
+.v3{
+  top:25px;
+  font-size: 22px;
+  text-align: left;
+  position: relative;
+}
+.v4{
+  top:40px;
+  font-size: 16px;
+  text-align: left;
+  position: relative;
+}
+.v5{
+  top:50px;
+  font-size: 16px;
+  text-align: left;
+  position: relative;
+}
+.v6{
+  position: relative;
+  width:70%;
+  float:right;
+  text-align: left;
+}
