@@ -24,7 +24,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#78D237",
     "navigationBarTitleText": "校运赛",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",

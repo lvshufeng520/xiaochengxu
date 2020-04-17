@@ -1,1 +1,61 @@
 /* pages/schedule/schedule.wxss */
+Page{
+  background-color: rgba(199, 244, 108, 0.6);
+  font-family: Arial;
+}
+/*项目栏头部*/
+.theme{
+  width:100%;
+  height:300rpx;
+  border-radius: 0rpx 0rpx 100rpx 100rpx;
+  background-color: #78D237;
+  color: #fff;
+}
+.task{
+  width:100%;
+  height: 42rpx;
+  padding:10rpx 0;
+  font-size: 32rpx;
+  text-align: center;
+  display:flex;
+  justify-content:center;
+}
+.line{
+  width:80rpx;
+  height:4rpx;
+  margin:auto 20rpx;
+  background-color:#fff;
+  text-align: center;
+}
+.project{
+  width:100%;
+  height:70rpx;
+  font-size:54rpx;
+  display:flex;
+  justify-content: center;
+}
+.next-project{
+  width:90%;
+  padding:20rpx 5%;
+}
+.next-project>text{
+  width:100%;
+  font-size:30rpx;
+  display:flex;
+  justify-content:flex-end;
+}
+/*项目导航*/
+.project-tab{
+  width:80%;
+  padding:0 10%;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+}
+/*具体项目表*/
+.all-project{
+  width:90%;
+  padding:5%;
+  border-radius:100rpx;
+  background-color:#fff;
+}

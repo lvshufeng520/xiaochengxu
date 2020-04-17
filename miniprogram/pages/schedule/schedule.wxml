@@ -1,2 +1,25 @@
 <!--pages/schedule/schedule.wxml-->
-<text>赛程表</text>
+<view class="theme">
+  <view class="task">
+    <view class="line"></view>
+    <text>正在进行</text>
+    <view class="line"></view>
+  </view>
+  <view class="project">
+   <text>男子甲组3000米 决赛</text>
+  </view>
+  <view class="next-project">
+    <text>下一项</text>
+    <text>男子乙组3000米 决赛</text>
+  </view>
+</view>
+
+<view class="project-tab">
+  <button>径赛</button>
+  <button>田赛</button>
+  <button>消息</button>
+</view>
+
+<view class="all-project">
+
+</view>
