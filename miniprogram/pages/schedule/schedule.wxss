@@ -2,6 +2,7 @@
 Page{
   background-color: rgba(199, 244, 108, 0.6);
   font-family: Arial;
+  position:relative;
 }
 /*项目栏头部*/
 .theme{
@@ -20,7 +21,7 @@ Page{
   display:flex;
   justify-content:center;
 }
-.line{
+.hor-line{
   width:80rpx;
   height:4rpx;
   margin:auto 20rpx;
@@ -46,16 +47,77 @@ Page{
 }
 /*项目导航*/
 .project-tab{
+  position:absolute;
+  top:260rpx;
   width:80%;
   padding:0 10%;
   display:flex;
   flex-direction:row;
   justify-content:center;
 }
+.project-tab button{
+  color: #2FBD81;
+  border:1rpx solid #2FBD81;
+  background-color:#fff;
+  border-radius:0;
+  font-weight:500;
+}
+.project-tab .active-tab{
+  background-color:#2FBD81;
+  color:#fff;
+}
+.project-tab .left-tab{
+  border-radius:10rpx 0 0 10rpx;
+}
+.project-tab .right-tab{
+  border-radius:0 10rpx 10rpx 0;
+}
 /*具体项目表*/
 .all-project{
-  width:90%;
-  padding:5%;
+  width:86%;
+  padding:80rpx 7%;
+  margin-bottom:50rpx;
   border-radius:100rpx;
   background-color:#fff;
+}
+/* 时间轴左侧 */
+.playlog-item {
+  display: flex;
+}
+.playlog-item .dotline {
+  width: 70rpx;
+  position: relative;
+}
+.playlog-item .dotline .line {
+  width: 1px;
+  height: 100%;
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+}
+.playlog-item .dotline .dot {
+  width: 30rpx;
+  height: 30rpx;
+  background: #3BBD4F;
+  position: absolute;
+  top: 10rpx;
+  left: 16rpx;
+  border-radius: 50%;
+}
+/*时间轴右侧主体内容*/
+.playlog-item .chapter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin:0 0 15rpx 15rpx;
+  line-height: 48rpx;
+}
+.playlog-item .chapter .content {
+  font-size: 32rpx;
+  color: #444;
+}
+.playlog-item .chapter .time {
+  font-size: 28rpx;
+  color: #999;
 }

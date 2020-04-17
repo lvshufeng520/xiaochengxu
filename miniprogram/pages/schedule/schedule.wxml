@@ -1,9 +1,9 @@
 <!--pages/schedule/schedule.wxml-->
 <view class="theme">
   <view class="task">
-    <view class="line"></view>
+    <view class="hor-line"></view>
     <text>正在进行</text>
-    <view class="line"></view>
+    <view class="hor-line"></view>
   </view>
   <view class="project">
    <text>男子甲组3000米 决赛</text>
@@ -14,12 +14,25 @@
   </view>
 </view>
 
+<!-- 导航 -->
 <view class="project-tab">
-  <button>径赛</button>
+  <button class="left-tab active-tab">径赛</button>
   <button>田赛</button>
-  <button>消息</button>
+  <button class="right-tab">消息</button>
 </view>
 
+<!-- 具体项目流程表 -->
 <view class="all-project">
-
+  <block wx:for="{{newsList}}" wx:key="">
+    <view class="playlog-item" bindtap="itemTapped">
+      <view class="dotline">
+        <view class="line"></view>
+        <view class="dot"></view>
+      </view>
+      <view class="chapter">
+        <text class="content">{{item.content}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+    </view>
+  </block>
 </view>
