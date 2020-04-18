@@ -21,6 +21,14 @@ Page{
   display:flex;
   justify-content:center;
 }
+.task-other{
+  width:100%;
+  padding:100rpx 0;
+  font-size: 60rpx;
+  display:flex;
+  justify-content:center;
+}
+/* 横线 */
 .hor-line{
   width:80rpx;
   height:4rpx;
@@ -35,6 +43,7 @@ Page{
   display:flex;
   justify-content: center;
 }
+/* 下一项 */
 .next-project{
   width:90%;
   padding:20rpx 5%;
@@ -47,23 +56,32 @@ Page{
 }
 /*项目导航*/
 .project-tab{
+  width:78%;
+  margin:0 11%;
   position:absolute;
   top:260rpx;
-  width:80%;
-  padding:0 10%;
+  background-color:#fff;
+  border-radius:10rpx;
   display:flex;
   flex-direction:row;
   justify-content:center;
 }
+/* tab滑块 */
+.project-tab view{
+  width:33.3%;
+  height:40px;
+  position:absolute;
+  left:0;
+  background-color:#2FBD81;
+}
 .project-tab button{
   color: #2FBD81;
   border:1rpx solid #2FBD81;
-  background-color:#fff;
+  background-color:rgba(255,255,255,0);
   border-radius:0;
   font-weight:500;
 }
-.project-tab .active-tab{
-  background-color:#2FBD81;
+.project-tab .active-tab {
   color:#fff;
 }
 .project-tab .left-tab{
@@ -80,6 +98,14 @@ Page{
   border-radius:100rpx;
   background-color:#fff;
 }
+.no-project{
+  height:550rpx;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
 /* 时间轴左侧 */
 .playlog-item {
   display: flex;
@@ -88,6 +114,7 @@ Page{
   width: 70rpx;
   position: relative;
 }
+/* 线条 */
 .playlog-item .dotline .line {
   width: 1px;
   height: 100%;
@@ -96,14 +123,39 @@ Page{
   top: 0;
   left: 30rpx;
 }
+/* 已完成 */
 .playlog-item .dotline .dot {
   width: 30rpx;
   height: 30rpx;
-  background: #3BBD4F;
+  background-color:#7BC887;
   position: absolute;
   top: 10rpx;
   left: 16rpx;
   border-radius: 50%;
+}
+/* 未开始 */
+.playlog-item .dotline .grey-dot{
+  background: #ccc;
+}
+/* 水滴箭头--正在进行 */
+.playlog-item .dotline .active-dot{
+  width: 32rpx;
+  height: 32rpx;
+  left: 14rpx;
+  background-color:#3BBD4F; 
+} 
+.playlog-item .dotline .active-dot:before{
+  content:''; 
+  position:absolute;
+  border-radius:40px;
+}
+.playlog-item .dotline .active-dot:after{
+  content:''; 
+  position:absolute; 
+  left:20rpx; 
+  border:10px transparent solid; 
+  border-left-color:#3BBD4F; 
+  border-width:16rpx 30rpx 16rpx 30rpx; 
 }
 /*时间轴右侧主体内容*/
 .playlog-item .chapter {

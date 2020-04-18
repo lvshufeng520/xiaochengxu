@@ -1,4 +1,21 @@
-<!--pages/schedule/schedule.wxml-->
+<!-- 没有项目的时候 -->
+<view wx:if="{{ inProgress }}">
+  <view class="theme">
+    <view class="task-other">
+      <view class="hor-line"></view>
+      <text>正在休息</text>
+      <view class="hor-line"></view>
+    </view>
+  </view>
+  <view class="all-project no-project">
+    <image src="../../images/timg.gif"></image>
+    <text>现在没有项目哦！</text>
+  </view>
+</view>
+
+<!-- 有项目的时候 -->
+<view wx:else>
+<!-- 头部项目框 -->
 <view class="theme">
   <view class="task">
     <view class="hor-line"></view>
@@ -16,9 +33,10 @@
 
 <!-- 导航 -->
 <view class="project-tab">
-  <button class="left-tab active-tab">径赛</button>
-  <button>田赛</button>
-  <button class="right-tab">消息</button>
+  <view animation="{{animate}}"></view>
+  <button data-tab="0" class="left-tab {{ tab==0 ? 'active-tab' : '' }}"  bindtap="trigger">径赛</button>
+  <button  data-tab="1" class="{{ tab==1 ? 'active-tab' : '' }}"  bindtap="trigger">田赛</button>
+  <button  data-tab="2" class="right-tab {{ tab==2 ? 'active-tab' : '' }}"  bindtap="trigger">消息</button>
 </view>
 
 <!-- 具体项目流程表 -->
@@ -27,7 +45,9 @@
     <view class="playlog-item" bindtap="itemTapped">
       <view class="dotline">
         <view class="line"></view>
-        <view class="dot"></view>
+        <view wx:if="{{item.state == 'doing'}}" class="dot active-dot"></view>
+        <view wx:elif="{{item.state == 'done'}}" class="dot"></view>
+        <view wx:else="{{item.state == 'later'}}" class="dot grey-dot"></view>
       </view>
       <view class="chapter">
         <text class="content">{{item.content}}</text>
@@ -35,4 +55,6 @@
       </view>
     </view>
   </block>
+</view>
+
 </view>
