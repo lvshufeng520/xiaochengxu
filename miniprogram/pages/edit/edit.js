@@ -8,25 +8,6 @@ Page({
   data: {
     array: ['男','女'],
     index:0,
-    region: ['河北省', '河北师范大学', '软件学院'],
-    customItem: '全部',
-    avatarUrl: '',
-    userInfo: {},
-    logged: true,
-    takeSession: false,
-    requestResult: '',
-    fileID: '',
-    cloudPath: '',
-    imagePath: '',
-    sname:[],
-    cname:[],
-    province:[],
-    all_data:[],
-    ress:[],//数据库所有院校信息
-    //三节
-    multiArray: [['河北省'],['河北师范大学','河北科技大学'], ['软件学院']],
-    // multiArray: [['无脊柱动物', '脊柱动物'], ['扁性动物', '线形动物', '环节动物', '软体动物', '节肢动物'], ['猪肉绦虫', '吸血虫']],
-    multiIndex: [0, 0, 0],
   },
 
   /**
@@ -46,51 +27,6 @@ Page({
         avatarUrl: data.data.avatarUrl,
         userInfo: data.data.nickName
       })
-    })
-  },
-  // 上传图片
-  doUpload: function () {
-    // 选择图片
-    console.log(this)
-    var that = this;
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['compressed'],
-      sourceType: ['album', 'camera'],
-      success: function (res) {
-        wx.showLoading({
-          title: '上传中',
-        })
-        const filePath = res.tempFilePaths[0]
-        // 上传图片
-        const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
-        wx.cloud.uploadFile({
-          cloudPath,
-          filePath,
-          success: res => {
-            console.log('[上传文件] 成功：', res)
-            app.globalData.fileID = res.fileID
-            app.globalData.cloudPath = cloudPath
-            app.globalData.imagePath = filePath;
-            that.setData({
-              avatarUrl: app.globalData.imagePath
-            })
-          },
-          fail: e => {
-            console.error('[上传文件] 失败：', e)
-            wx.showToast({
-              icon: 'none',
-              title: '上传失败',
-            })
-          },
-          complete: () => {
-            wx.hideLoading()
-          }
-        })
-      },
-      fail: e => {
-        console.error(e)
-      }
     })
   },
   //查询数据库
@@ -129,20 +65,6 @@ Page({
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
-    })
-  },
-  //学校、学院选择器
-  bindRegionChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      region: e.detail.value
-    })
-  },
-  //多列选择器测试
-  bindMultiPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      multiIndex: e.detail.value
     })
   },
   /**

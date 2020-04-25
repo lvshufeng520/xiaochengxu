@@ -1,0 +1,40 @@
+/* miniprogram/pages/Participants/Participants.wxss */
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #88d4a1;
+}
+.v1{
+  margin-top:30px;
+  padding-left:25px
+}
+.h1{
+  margin-right:40px;
+}
+.h2{
+  margin-right:50px;
+}
+.btn1{
+  position: absolute;
+  top:5px;
+  right:5px;
+  border:1px solid black;
+  width:40px;
+  text-align:center;
+}

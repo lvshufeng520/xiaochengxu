@@ -1,0 +1,31 @@
+<!--miniprogram/pages/Participants/Participants.wxml-->
+<view class="btn1">
+  <text>导出</text>
+</view>
+<view class="v1">
+  <text class="h1">学院</text>
+  <text class="h1">姓名</text>
+  <text class="h2">学号</text>
+  <text class="h1">成绩</text>
+</view>
+<!-- 表格 -->
+<view class="table">
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.xueyuan}}</view>
+      <view class="td">{{item.Name}}</view>
+      <view class="td">{{item.Student_num}}</view>
+      <view class="td">
+      <input class="i4" type="text" placeholder="{{item.Grade}}"/>
+      </view>
+      <view class="td">{{item.text}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.xueyuan}}</view>
+      <view class="td">{{item.Name}}</view>
+      <view class="td">{{item.Student_num}}</view>
+      <view class="td"><input class="i4" type="text" placeholder="{{item.Grade}}"/></view>
+      <view class="td">{{item.text}}</view>
+    </view>
+  </block>
+</view>
