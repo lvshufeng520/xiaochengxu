@@ -1,1 +1,55 @@
 /* miniprogram/pages/apply/apply.wxss */
+Page{
+  font-family: Arial;
+  position:relative;
+}
+
+.title{
+  margin: 40rpx 0 0 50rpx;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.apply_form{
+  margin-top:50rpx;
+}
+
+.apply_picker{
+    padding-left:50rpx;
+    padding-top:50rpx;
+    display:block;
+    width: 375px;
+    height: 150rpx;
+    font-size: 18px;
+    line-height: 50rpx;
+    background-color: white;
+}
+
+.hor-line{
+  text-align: center;
+  width:80rpx;
+  height:10rpx;
+  margin:auto 20rpx;
+}
+
+.side_text{
+  margin-top:20px;
+  font-size: 15px;
+  color:grey;
+}
+
+.real_picker{
+  color:#539EB7;
+  float:right;
+  margin-right:90rpx;
+  line-height:10px;
+}
+
+#apply_button{
+  display:position;
+  top:150px;
+  background-color:orangered;
+  color:white;
+  width:500rpx;
+  line-height:50px;
+}
