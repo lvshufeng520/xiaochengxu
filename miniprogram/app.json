@@ -1,12 +1,12 @@
 {
   "pages": [
-    
+    "pages/index/index",
+    "pages/apply/apply",
     "pages/schedule/schedule",
     "pages/mine/mine",
     "pages/mine_management/mine_management",
     "pages/mine_join/mine_join",
     "pages/edit/edit",
-    "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",

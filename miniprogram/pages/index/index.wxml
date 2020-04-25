@@ -19,19 +19,22 @@
       <view class="text_one">
         <text>举办赛事 \n</text>
         <text>举办比赛，设置相关选项</text>
-      </view>
-       
+      </view>     
     </view>
-    <view class="block_two">
-      <image
-      class="photo"
-      src="../../images/in.png"
-      >
-      </image>
-      <view class="text_one">
-        <text>参加比赛 \n</text>
-        <text>我要报名，查看赛事要求</text>
+
+    <navigator class="block_two" url="../apply/apply" open-type="navigate">
+      <view>
+        <image
+        class="photo"
+        src="../../images/in.png"
+        >
+        </image>
+        <view class="text_one">
+          <text>参加比赛 \n</text>
+          <text>我要报名，查看赛事要求</text>
+        </view>
       </view>
-    </view>
+    </navigator>
+    
   </view>
 </view>
