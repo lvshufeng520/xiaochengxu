@@ -1,13 +1,15 @@
 <!--miniprogram/pages/mine/mine.wxml.wxml-->
-<image class="bj1" src="../../images/bj.jpg"></image>
+<!-- <image class="bj1" src="../../images/bj.jpg"></image> -->
+<image class="bj1" src='cloud://hic-f6rft.6869-hic-f6rft-1301817571/bj.jpg'></image>
 <!-- 登陆+编辑 -->
 <view>
-  <button 
-    open-type="getUserInfo" 
-    bindgetuserinfo="onGetUserInfo"
-    style="background-image: url({{avatarUrl}})"
+  <view
+    style="background-image: url({{avatarUrl}});"
     class='tx'
-  ></button>
+  >
+  <button open-type="getUserInfo" 
+    bindgetuserinfo="onGetUserInfo"></button>
+  </view>
 </view>
 <view class="body1">
 </view>
