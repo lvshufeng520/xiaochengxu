@@ -41,7 +41,7 @@ Page{
 .real_picker{
   color:#539EB7;
   float:right;
-  margin-right:90rpx;
+  margin-right:120rpx;
   line-height:10px;
 }
 
