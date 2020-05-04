@@ -72,6 +72,7 @@ Page{
   height:40px;
   position:absolute;
   left:0;
+  border:1rpx solid #2FBD81;
   background-color:#2FBD81;
 }
 .project-tab button{

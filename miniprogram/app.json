@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/schedule/schedule",
     "pages/index/index",
     "pages/apply/apply",
-    "pages/schedule/schedule",
+    
     "pages/mine/mine",
     "pages/mine_management/mine_management",
     "pages/mine_join/mine_join",

@@ -1,5 +1,5 @@
 <!-- 没有项目的时候 -->
-<view wx:if="{{ inProgress }}">
+<view wx:if="{{ !inProgress }}">
   <view class="theme">
     <view class="task-other">
       <view class="hor-line"></view>
@@ -23,11 +23,11 @@
     <view class="hor-line"></view>
   </view>
   <view class="project">
-   <text>男子甲组3000米 决赛</text>
+   <text>{{progress.now}}</text>
   </view>
   <view class="next-project">
     <text>下一项</text>
-    <text>男子乙组3000米 决赛</text>
+    <text>{{progress.next}}</text>
   </view>
 </view>
 
