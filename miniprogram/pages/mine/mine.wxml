@@ -14,7 +14,7 @@
 <view class="body1">
 </view>
 <view class="body2">
-  <view wx:if="{{!logged}}" class="info">
+  <view wx:if="{{logged}}" class="info">
     <text id="userid">点击头像授权登陆\n</text>
   </view>
   <view wx:else class="info">

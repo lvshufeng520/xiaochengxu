@@ -3,8 +3,8 @@
   width:100%;
 }
 .tx{
-  height:300rpx;
-  width:300rpx;
+  height:260rpx;
+  width:260rpx;
   position:absolute;
   top:17%;
   left:30%;
@@ -37,11 +37,11 @@
   margin:0 auto;
   width:80%;
   height:100px;
-  font-size: 18px;
+  font-size: 22px;
   color:#9A8B8B;
   text-align: center;
   position:relative;
-  top:20px;
+  top:22px;
 }
 .btn{
   width:40vw;

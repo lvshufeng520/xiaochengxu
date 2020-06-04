@@ -11,7 +11,7 @@
   <image src='../../images/mine.png' class="i1"></image>
   <view class="i2">
     <text class="i3">姓名</text>
-    <input class="i4" 
+    <input class="i4"  bindinput="name1"
     style='text-align:right'
     type="text" placeholder-style='text-align:right' placeholder="请输入真实姓名" />
   </view>
@@ -31,7 +31,7 @@
   <image src='../../images/school.png' class="i1"></image>
   <view class="i2">
     <text class="i3">学校</text>
-    <input class="i4" 
+    <input class="i4" bindinput="school1"
     style='text-align:right'
     type="text" placeholder-style='text-align:right' placeholder="请输入学校名称" />
   </view>
@@ -40,7 +40,7 @@
   <image src='../../images/college.png' class="i1"></image>
   <view class="i2">
     <text class="i3">学院</text>
-    <input class="i4" 
+    <input class="i4" bindinput="college1"
     style='text-align:right'
     type="text" placeholder-style='text-align:right' placeholder="请输入学院名称" />
   </view>
@@ -49,13 +49,16 @@
   <image src='../../images/id.png' class="i1"></image>
   <view class="i2">
     <text class="i3">学号</text>
-    <input class="i4" style='text-align:right' type="text" placeholder-style='text-align:right' placeholder="请输入学号" />
+    <input class="i4"  bindinput="id1"
+    style='text-align:right' type="text" placeholder-style='text-align:right' placeholder="请输入学号" />
   </view>
 </view>
 <view class="li" id="li6">
   <image src='../../images/tel.png' class="i1"></image>
   <view class="i2">
     <text class="i3">联系方式</text>
-    <input class="i4" style='text-align:right' type="text" placeholder-style='text-align:right' placeholder="请输入手机号" />
+    <input class="i4" bindinput="tel1"
+    style='text-align:right' type="text" placeholder-style='text-align:right' placeholder="请输入手机号" />
   </view>
 </view>
+<button class="x1" bindsaveuserinfo="onGetUserInfo">保存</button>

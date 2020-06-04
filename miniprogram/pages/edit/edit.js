@@ -8,6 +8,37 @@ Page({
   data: {
     array: ['男','女'],
     index:0,
+    userName:null,
+    userSex:null,
+    userSchool:null,
+    userCollege:null,
+    userId:null,
+    userTel:null,
+  },
+  name1:function(e){
+    this.setData({
+      userName:e.detail.value
+    })
+  },
+  school1: function (e) {
+    this.setData({
+      userSchool: e.detail.value
+    })
+  },
+  college1: function (e) {
+    this.setData({
+      userCollege: e.detail.value
+    })
+  },
+  id1: function (e) {
+    this.setData({
+      userId: e.detail.value
+    })
+  },
+  tel1: function (e) {
+    this.setData({
+      userTel: e.detail.value
+    })
   },
 
   /**

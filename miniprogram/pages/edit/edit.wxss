@@ -68,3 +68,11 @@ i4{
 #li6{
   top:370px;
 }
+.x1{
+  position: absolute;
+  bottom:100px;
+  text-align: center;
+  left:25%;
+  width:50px;
+  border-radius: 25px;
+}
