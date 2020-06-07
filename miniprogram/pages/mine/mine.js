@@ -4,6 +4,7 @@ Page({
   /**
    * 页面的初始数据
    */
+
   data: {
     avatarUrl: './unlogin.png',//未登录时的头像
     userInfo: {},//用户信息
@@ -11,12 +12,42 @@ Page({
     takeSession: false,
     requestResult: '',
     allinfo:false,//用户信息是否完善
+    userName: null,
+    userSex: null,
+    userSchool: null,
+    userCollege: null,
+    userId: null,
+    userTel: null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.getStorage({//获取本地缓存
+      key: "idd",
+      success: res=>{
+        this.setData({
+          allinfo:true
+        })
+        //读取数据库
+        const db = wx.cloud.database()
+        db.collection('User').where({
+          Uid: res.data
+        }).get({
+          success: res=>{
+            this.setData({
+              userName: res.data[0].Uname,
+              userSex: res.data[0].Usex,
+              userSchool: res.data[0].Uschool,
+              userCollege: res.data[0].Usubject,
+              userId: res.data[0].Ustuid,
+              userTel: res.data[0].Utel,
+            })
+          }
+        })
+      }
+    })
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -24,6 +55,7 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
+              console.log(res)
               this.setData({
                 avatarUrl: res.userInfo.avatarUrl,
                 userInfo: res.userInfo

@@ -18,13 +18,13 @@
     <text id="userid">点击头像授权登陆\n</text>
   </view>
   <view wx:else class="info">
-    <view wx:if="{{!allinfo}}">
-        <text class="bianji" bindtouchend="bindChangeTo">点击编辑个人信息</text>
+    <view wx:if="{{allinfo}}">
+      <text id="username" style="font-size:25px">"{{userName}}"\n</text>
+      <text id="userid">{{userId}}\n</text>
+      <text id="usercollege">{{userSchool}}\n</text>
     </view>
     <view wx:else>
-      <text id="username" style="font-size:25px">小一\n</text>
-      <text id="userid">2017012049\n</text>
-      <text id="usercollege">河北师范大学软件学院\n</text>
+        <text class="bianji" bindtouchend="bindChangeTo">点击编辑个人信息</text>
     </view>
   </view>
   <navigator url="../mine_join/mine_join" open-type="navigate">

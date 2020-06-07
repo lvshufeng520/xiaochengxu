@@ -61,4 +61,4 @@
     style='text-align:right' type="text" placeholder-style='text-align:right' placeholder="请输入手机号" />
   </view>
 </view>
-<button class="x1" bindsaveuserinfo="onGetUserInfo">保存</button>
+<button class="x1" bindtap="onGetUserInfo">保存</button>

@@ -40,7 +40,33 @@ Page({
       userTel: e.detail.value
     })
   },
-
+  onGetUserInfo:function(){
+    wx.setStorage({
+      key: 'idd',
+      data: this.data.userName + this.data.userId
+    })
+    app.globalData.flag_info = true;
+    const db = wx.cloud.database()
+    console.log(this.data)
+    db.collection('User').add({
+      // data 字段表示需新增的 JSON 数据
+      data: {
+        // _id: 'todo-identifiant-aleatoire', // 可选自定义 _id，在此处场景下用数据库自动分配的就可以了
+        // description: "learn cloud database",
+        Uid: this.data.userName + this.data.userId,
+        Uname: this.data.userName,
+        Uschool: this.data.userSchool,
+        Usex:this.data.array[this.data.index],
+        Ustuid:this.data.userId,
+        Usubject:this.data.userCollege,
+        // Utel:this.date.userTel,
+      },
+      success: function (res) {
+        // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+        console.log(res)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
